@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAA;EACC;;;AAGD;EACE;EACA;EACA;;;AAEF;EACE","file":"main.fb6bbcaf.css","sourceRoot":"..","sourcesContent":["html{\r\n background-color: red;\r\n}\r\n\r\n.wrap {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  flex-direction: column;\r\n}\r\nbutton#flip-button {\r\n  height: 5vh;\r\n}"]}

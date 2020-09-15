@@ -1,0 +1,12 @@
+html{
+ background-color: red;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+button#flip-button {
+  height: 5vh;
+}

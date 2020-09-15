@@ -1,3 +1,6 @@
+   /* Import another CSS file */
+   import '../styles.scss'
+
    //Selector for your <video> element
    const video = document.querySelector('#myVidPlayer');
 

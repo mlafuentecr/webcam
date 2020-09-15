@@ -2,5 +2,8 @@
   "dependencies": {
     "cam": "0.0.1",
     "webcam-easy": "^1.0.5"
+  },
+  "devDependencies": {
+    "sass": "^1.26.10"
   }
 }
