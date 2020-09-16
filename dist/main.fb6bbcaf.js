@@ -196,10 +196,19 @@ require("../styles.scss");
 
 /* Import another CSS file */
 //Selector for your <video> element
-var video = document.querySelector('#myVidPlayer'); //Core
+var video = document.querySelector('#myVidPlayer');
+var front = false;
+var constraints = {
+  video: {
+    facingMode: front ? "user" : "environment"
+  }
+}; //Core
 
 window.navigator.mediaDevices.getUserMedia({
-  video: true
+  audio: false,
+  video: {
+    facingMode: front ? "user" : "environment"
+  }
 }).then(function (stream) {
   video.srcObject = stream;
 
@@ -209,17 +218,16 @@ window.navigator.mediaDevices.getUserMedia({
 }).catch(function () {
   alert('You have give browser the permission to run Webcam and mic ;( ');
 });
-var front = false;
 
 document.getElementById('flip-button').onclick = function () {
   front = !front;
 };
 
-var constraints = {
-  video: {
-    facingMode: front ? "user" : "environment"
-  }
-};
+if (navigator.mediaDevices.getSupportedConstraints().facingMode) {
+  console.log("facingmode Supported!");
+} else {
+  console.log("facingmode Not!");
+}
 },{"../styles.scss":"styles.scss"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -248,7 +256,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58434" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58818" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
