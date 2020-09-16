@@ -16,7 +16,7 @@
            alert('You have give browser the permission to run Webcam and mic ;( ');
        });
 
-       var front = false;
+var front = true;
 document.getElementById('flip-button').onclick = function() { front = !front; };
 
 var constraints = { video: { facingMode: (front? "user" : "environment") } };
